@@ -1,0 +1,12 @@
+ outp | addr | data (base 16)
+
+ 20:0 |    0 |    ; nop:
+ 20:0 |    0 | 00 ; op 0
+ 21:0 |    1 |    ; li:
+ 21:0 |    1 | 05 ; op PUSH | WE_I_TOS
+ 22:0 |    2 |    ; add:
+ 22:0 |    2 | 12 ; op POP | WE_Y_TOS
+ 23:0 |    3 |    ; drop:
+ 23:0 |    3 | 0a ; op POP | WE_NOS_TOS
+ 24:0 |    4 |    ; dupe:
+ 24:0 |    4 | 09 ; op PUSH | WE_NOS_TOS
